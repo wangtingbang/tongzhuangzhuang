@@ -1,4 +1,4 @@
-package me.tongzhuangzhuang.support.database;
+package me.tongzhuangzhuang.support.mybatis;
 
 import java.io.*;
 import java.util.*;

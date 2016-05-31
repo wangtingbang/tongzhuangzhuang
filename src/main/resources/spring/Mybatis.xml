@@ -5,9 +5,9 @@
         <setting name="logPrefix" value="dao."/>
     </settings>
 	<plugins>
-		<plugin interceptor="me.tongzhuangzhuang.support.database.OffsetLimitInterceptor">
+		<plugin interceptor="me.tongzhuangzhuang.support.mybatis.OffsetLimitInterceptor">
 			<property name="dialectClass"
-				value="me.tongzhuangzhuang.support.database.MySQLDialect" />
+				value="me.tongzhuangzhuang.support.mybatis.MySQLDialect" />
 		</plugin>
 	</plugins>
 </configuration>

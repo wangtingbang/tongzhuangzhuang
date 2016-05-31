@@ -1,4 +1,4 @@
-package me.tongzhuangzhuang.support.database;
+package me.tongzhuangzhuang.support.mybatis;
 
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;

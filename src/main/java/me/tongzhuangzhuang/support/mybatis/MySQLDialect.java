@@ -1,4 +1,4 @@
-package me.tongzhuangzhuang.support.database;
+package me.tongzhuangzhuang.support.mybatis;
 
 public class MySQLDialect extends Dialect {
 
