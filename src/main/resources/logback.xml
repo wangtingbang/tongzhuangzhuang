@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<jmxConfigurator />
-	<property name="LOG_HOME" value="${catalina.base}/logs/cmbchina-activity-tran" />
+	<!-- <property name="LOG_HOME" value="${catalina.base}/logs/cmbchina-activity-tran" />  -->
+	<property name="LOG_HOME" value="logs/cmbchina-activity-tran" />
 	<property name="LOG_NAME" value="cmbchina-activity-tran" />
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
 		<Encoding>UTF-8</Encoding>
@@ -21,7 +22,6 @@
 		</rollingPolicy>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>
-				<!--%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n-->
 				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%method:[%line]- %msg%n
 			</pattern>
 		</layout>

@@ -43,7 +43,7 @@
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage">
-			<value>com.cmbchina.activity.busi.act.dao</value>
+			<value>me.tongzhuangzhuang.business.dao</value>
 		</property>
 	</bean>
 </beans>

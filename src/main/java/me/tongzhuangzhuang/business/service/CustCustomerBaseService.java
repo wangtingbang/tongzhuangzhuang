@@ -1,5 +1,8 @@
 package me.tongzhuangzhuang.business.service;
 
+import java.util.List;
+
+import me.tongzhuangzhuang.business.dto.CustCustomerBase;
 
 /**
  * 
@@ -8,4 +11,5 @@ package me.tongzhuangzhuang.business.service;
  */
 public interface CustCustomerBaseService {
 
+  public List<CustCustomerBase> listCustomers();
 }
