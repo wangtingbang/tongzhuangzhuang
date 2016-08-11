@@ -43,7 +43,7 @@ public class UserLoginController {
     if(StringUtils.isBlank(token)){
       String newToken = KeyGenerator.uuid();
       request.getSession().setAttribute("token", newToken);
-      token = newToken;
+      token = id+"-"+newToken;
       log.info("set new token:{}, id:{}", token, id);  
     }
     return token;
