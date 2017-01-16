@@ -1,6 +1,5 @@
 package me.tongzhuangzhuang.restful;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -14,13 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import me.tongzhuangzhuang.utils.KeyGenerator;
 
-
-
 /**
  * Created by wangtingbang on 16/3/22.
  */
 @Controller
-@RequestMapping(value = "customer")
+@RequestMapping(value = "user")
 public class UserLoginController {
 
   private static final Logger log = LoggerFactory.getLogger(UserLoginController.class);
@@ -38,12 +35,16 @@ public class UserLoginController {
     String token = (String) session.getAttribute("token");
     String id = session.getId();
     
+    if(!StringUtils.isBlank(id)){
+      return id;
+    }
     log.info("get from request, token:{}, id:{}", token, id);
     
     if(StringUtils.isBlank(token)){
       String newToken = KeyGenerator.uuid();
-      request.getSession().setAttribute("token", newToken);
       token = id+"-"+newToken;
+      request.getSession().setAttribute("token", token);
+      
       log.info("set new token:{}, id:{}", token, id);  
     }
     return token;
